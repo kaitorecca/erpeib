@@ -32,10 +32,10 @@ class QuickCreditAssessmentSME(Document):
 			LEFT JOIN `tabQuick Credit Assessment SME Criteria` a ON a.criteria_value = d.criteria_mark AND a.criteria_name = d.criteria
 		""".format(rcd=self.name))[0][0]
 
-		if final_score[0][0] < 10:
+		if final_score < 10:
 			self.credit_scoring_result = "Loai ho so"
 		else:
-			self.credit_scoring_result = "Diem tin dung la " + str(final_score[0][0])
+			self.credit_scoring_result = "Diem tin dung la " + str(final_score)
 
 
 
