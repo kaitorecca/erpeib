@@ -30,7 +30,7 @@ class QuickCreditAssessmentSME(Document):
 				SELECT 'so_nam_hoat_dong', so_nam_hoat_dong from `tabQuick Credit Assessment SME` WHERE name = '{rcd}'
 			) d
 			LEFT JOIN `tabQuick Credit Assessment SME Criteria` a ON a.criteria_value = d.criteria_mark AND a.criteria_name = d.criteria
-		""".format(rcd=self.name), as_dict=True)
+		""".format(rcd=self.name), as_dict=True)[0][0]
 
 		if final_score < 10:
 			self.credit_scoring_result = "Loai ho so"
