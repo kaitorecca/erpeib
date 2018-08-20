@@ -33,10 +33,10 @@ class QuickCreditAssessmentSME(Document):
 		""".format(rcd=self.name), as_dict=True)
 
 		if final_score < 10:
-			self.credit_scoring_result = "Loại hồ sơ"
+			self.credit_scoring_result = "Loai ho so"
 		else:
-			self.credit_scoring_result = "Điểm tín dụng là " + final_score
-			
+			self.credit_scoring_result = "Diem tin dung la  " + final_score
+
 
 
 
