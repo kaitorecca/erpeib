@@ -35,7 +35,7 @@ class QuickCreditAssessmentSME(Document):
 		if final_score < 10:
 			self.credit_scoring_result = "Loai ho so"
 		else:
-			self.credit_scoring_result = "Diem tin dung la " + str(final_score)
+			self.credit_scoring_result = str(final_score)
 
 
 
