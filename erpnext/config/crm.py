@@ -8,6 +8,11 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
+					"name": "Quick Credit Assessment SME",
+					"description": _("Quick Credit Assessment for SME Program."),
+				},
+				{
+					"type": "doctype",
 					"name": "Lead",
 					"description": _("Database of potential customers."),
 				},
