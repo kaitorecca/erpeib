@@ -23,7 +23,7 @@ def get_data():
 		},
 		{
 			"_doctype": "Quick Credit Assessment SME",
-			"module_name": "Credit Assessment",
+			"module_name": "Quick Credit Assessment SME",
 			"color": "#2ecc71",
 			"icon": "octicon octicon-organization",
 			"type": "link",
