@@ -40,7 +40,7 @@ class QuickCreditAssessmentSME(Document):
 				SELECT 'fb_phan_loai_dai_ly', fb_phan_loai_dai_ly from `tabQuick Credit Assessment SME` WHERE name = '{rcd}'
 			) d
 			LEFT JOIN `tabQuick Credit Assessment SME Criteria` a ON a.criteria_value = d.criteria_mark AND a.criteria_name = d.criteria
-			WHERE d.criteria_product = '{prd}'
+			WHERE a.criteria_product = '{prd}'
 		""".format(rcd=self.name,prd=self.loai_nganh_nghe))[0][0]
 
 		if final_score < 10:
