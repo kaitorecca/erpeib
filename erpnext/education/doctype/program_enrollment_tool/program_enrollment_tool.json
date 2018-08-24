@@ -10,6 +10,7 @@
  "doctype": "DocType", 
  "document_type": "", 
  "editable_grid": 0, 
+ "engine": "InnoDB", 
  "fields": [
   {
    "allow_bulk_edit": 0, 
@@ -513,7 +514,7 @@
  "issingle": 1, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2018-01-02 11:59:40.230689", 
+ "modified": "2018-08-24 15:34:49.236024", 
  "modified_by": "Administrator", 
  "module": "Education", 
  "name": "Program Enrollment Tool", 
