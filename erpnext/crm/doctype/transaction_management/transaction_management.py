@@ -5,6 +5,9 @@
 from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
+from erpnext.accounts.party import validate_party_accounts, get_dashboard_info, get_timeline_data
 
 class TransactionManagement(Document):
-	pass
+	def onload(self):
+		"""Load address and contacts in `__onload`"""
+		self.load_dashboard_info()
