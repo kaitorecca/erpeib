@@ -13,6 +13,11 @@ def get_data():
 				},
 				{
 					"type": "doctype",
+					"name": "Transaction Management",
+					"description": _("Transaction Management."),
+				},
+				{
+					"type": "doctype",
 					"name": "Lead",
 					"description": _("Database of potential customers."),
 				},
@@ -37,6 +42,11 @@ def get_data():
 			"label": _("Reports"),
 			"icon": "fa fa-list",
 			"items": [
+				{
+					"type": "doctype",
+					"name": "Dashboard List",
+					"description": _("Dashboard Report."),
+				},
 				{
 					"type": "report",
 					"is_query_report": True,
