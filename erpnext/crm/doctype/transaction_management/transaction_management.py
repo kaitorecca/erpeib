@@ -11,3 +11,6 @@ class TransactionManagement(Document):
 	def onload(self):
 		"""Load address and contacts in `__onload`"""
 		self.load_dashboard_info()
+	def load_dashboard_info(self):
+		info = get_dashboard_info(self.doctype, self.name)
+		self.set_onload('dashboard_info', info)
