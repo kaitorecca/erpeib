@@ -8,19 +8,11 @@ def get_data():
 		'transactions': [
 			{
 				'label': _('Pre Sales'),
-				'items': ['Opportunity', 'Quotation']
+				'items': ['Transaction Management']
 			},
 			{
-				'label': _('Orders'),
-				'items': ['Sales Order', 'Delivery Note', 'Sales Invoice']
-			},
-			{
-				'label': _('Support'),
-				'items': ['Issue']
-			},
-			{
-				'label': _('Projects'),
-				'items': ['Project']
+				'label': _('Meeting'),
+				'items': ['Call Report']
 			}
 		]
 	}
