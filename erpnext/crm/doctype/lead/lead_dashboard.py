@@ -5,7 +5,7 @@ def get_data():
 		'fieldname': 'lead',
 		'transactions': [
 			{
-				'items': ['Opportunity', 'Quotation']
+				'items': ['Opportunity', 'Transaction Management', 'Call Report']
 			},
 		]
 	}
