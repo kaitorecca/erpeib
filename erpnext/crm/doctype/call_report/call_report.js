@@ -4,5 +4,11 @@
 frappe.ui.form.on('Call Report', {
 	refresh: function(frm) {
 
+	},
+
+	onload: function() {
+
+		frm.set_value("meeting_time", frappe.datetime.now_datetime());
+
 	}
 });

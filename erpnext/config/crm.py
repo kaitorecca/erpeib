@@ -18,6 +18,11 @@ def get_data():
 				},
 				{
 					"type": "doctype",
+					"name": "Call Report",
+					"description": _("Call Report."),
+				},
+				{
+					"type": "doctype",
 					"name": "Lead",
 					"description": _("Database of potential customers."),
 				},

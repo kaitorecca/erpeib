@@ -22,6 +22,7 @@ erpnext.LeadController = frappe.ui.form.Controller.extend({
 			cur_frm.fields_dict.contact_by.get_query = function(doc, cdt, cdn) {
 				return { query: "frappe.core.doctype.user.user.user_query" } }
 		}
+
 	},
 
 	refresh: function() {
