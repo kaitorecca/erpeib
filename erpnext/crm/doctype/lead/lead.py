@@ -174,7 +174,7 @@ def make_call_report(source_name, target_doc=None):
 				"rm_name": "lead_owner",
 			}
 		}
-		}, target_doc, set_missing_values, ignore_permissions=ignore_permissions)
+		}, target_doc, set_missing_values)
 
 	return target_doc
 
