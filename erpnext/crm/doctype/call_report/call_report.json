@@ -435,7 +435,7 @@
    "read_only": 0, 
    "remember_last_selected_value": 0, 
    "report_hide": 0, 
-   "reqd": 0, 
+   "reqd": 1, 
    "search_index": 0, 
    "set_only_once": 0, 
    "unique": 0
@@ -811,7 +811,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2018-09-10 15:13:27.975588", 
+ "modified": "2018-09-13 13:26:33.043033", 
  "modified_by": "Administrator", 
  "module": "CRM", 
  "name": "Call Report", 
