@@ -166,14 +166,11 @@ def make_call_report(source_name, target_doc=None):
 			"doctype": "Call Report",
 			"field_map": {
 				"name": "lead",
+				"eximbank_participant": {
+					"rm_name": "lead_owner"
+				}
 			}
 		},
-		"Lead": {
-			"doctype": "Call Report Eximbank Participants",
-			"field_map": {
-				"rm_name": "lead_owner",
-			}
-		}
 		}, target_doc, set_missing_values)
 
 	return target_doc
