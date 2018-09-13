@@ -1,5 +1,8 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: GNU General Public License v3. See license.txt
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 
 from __future__ import unicode_literals
 import frappe
@@ -148,6 +151,34 @@ def make_opportunity(source_name, target_doc=None):
 		}}, target_doc)
 
 	return target_doc
+
+@frappe.whitelist()
+def make_call_report(source_name, target_doc=None):
+	def set_missing_values(source, target):
+		if source.company_name:
+			target.customer_type = "Company"
+			target.meeting_title = "Cuộc gặp với " + source.company_name
+		else:
+			target.customer_type = "Individual"
+			target.meeting_title = "Cuộc gặp với " + source.lead_name
+
+	target_doc = get_mapped_doc("Lead", source_name,{
+		"Lead": {
+			"doctype": "Call Report",
+			"field_map": {
+				"name": "lead",
+			}
+		},
+		"Lead": {
+			"doctype": "Call Report Eximbank Participants",
+			"field_map": {
+				"rm_name": "lead_owner",
+			}
+		}
+		}, target_doc, set_missing_values, ignore_permissions=ignore_permissions)
+
+	return target_doc
+
 
 @frappe.whitelist()
 def make_quotation(source_name, target_doc=None):
