@@ -65,6 +65,8 @@ class Employee(NestedSet):
 			self.update_user_permissions()
 
 	def permission_lock_for_branch_manager(self):
+		user = frappe.get_doc("User",frappe.session.user)
+		user.flags.ignore_permissions = True
 		if "Branch Manager" in user.get("roles"):
 			branch_manager = frappe.db.get_value("Employee", {"user_id":frappe.session.user}, 'branch')
 			if branch !=  branch_manager:
