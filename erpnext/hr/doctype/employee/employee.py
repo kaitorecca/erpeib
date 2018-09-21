@@ -69,7 +69,7 @@ class Employee(NestedSet):
 		user.flags.ignore_permissions = True
 		if "Branch Manager" in user.get("roles"):
 			branch_manager = frappe.db.get_value("Employee", {"user_id":frappe.session.user}, 'branch')
-			if branch !=  branch_manager:
+			if self.branch !=  branch_manager:
 				throw(_("Branch Manager can update only employees in the branch"))
 
 	def update_user_permissions(self):
