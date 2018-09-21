@@ -37,6 +37,7 @@ class Employee(NestedSet):
 		validate_status(self.status, ["Active", "Left"])
 
 		self.employee = self.name
+		self.permission_lock_for_branch_manager()
 		self.validate_date()
 		self.validate_email()
 		self.validate_status()
@@ -57,10 +58,17 @@ class Employee(NestedSet):
 		frappe.utils.nestedset.update_nsm(self)
 
 	def on_update(self):
+		self.permission_lock_for_branch_manager()
 		self.update_nsm_model()
 		if self.user_id:
 			self.update_user()
 			self.update_user_permissions()
+
+	def permission_lock_for_branch_manager(self):
+		if "Branch Manager" in user.get("roles"):
+			branch_manager = frappe.db.get_value("Employee", {"user_id":frappe.session.user}, 'branch')
+			if branch !=  branch_manager:
+				throw(_("Branch Manager can update only employees in the branch"))
 
 	def update_user_permissions(self):
 		frappe.permissions.add_user_permission("Employee", self.name, self.user_id)
