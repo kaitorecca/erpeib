@@ -12,7 +12,7 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Delivery Note",
+					"name": "Delivery Note" 
 				},
 				{
 					"type": "doctype",

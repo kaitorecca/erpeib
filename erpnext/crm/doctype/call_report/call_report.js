@@ -8,7 +8,7 @@ frappe.ui.form.on('Call Report', {
 
 	onload: function() {
 
-		frm.set_value("meeting_time", frappe.datetime.now_datetime());
+		cur_frm.set_value("meeting_time", frappe.datetime.now_datetime());
 
 	}
 });
