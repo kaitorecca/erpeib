@@ -1,13 +1,13 @@
 frappe.ui.Page = frappe.ui.Page.extend({
 	add_extra_sidebar: function(me){
-		var parent = me.sidebar.find(".sidebar-menu.standard-actions");
+		var parent = this.sidebar.find(".sidebar-menu.standard-actions");
 		var li = '<ul class="list-unstyled sidebar-menu sidebar-choose-view"><li class="divider"></li>  <li class="h6 stat-label">Choose your view</li></ul>';
 
 		li.insertAfter(parent);
 	},
 
 	add_extra_sidebar_item: function(label, action, insert_after, prepend) {
-		var parent = me.sidebar.find(".sidebar-menu.sidebar-choose-view");
+		var parent = this.sidebar.find(".sidebar-menu.sidebar-choose-view");
 		var li = $('<li>');
 		var link = $('<a>').html(label).on("click", action).appendTo(li);
 
