@@ -1,9 +1,10 @@
 frappe.ui.Page = frappe.ui.Page.extend({
 	add_extra_sidebar: function(me){
 		var parent = this.sidebar.find(".sidebar-menu.standard-actions");
-		var li = '<ul class="list-unstyled sidebar-menu sidebar-choose-view"><li class="divider"></li>  <li class="h6 stat-label">Choose your view</li></ul>';
+		var li = $('<ul class="list-unstyled sidebar-menu sidebar-choose-view"><li class="divider"></li>  <li class="h6 stat-label">Choose your view</li></ul>');
 
 		li.insertAfter(parent);
+		return li;
 	},
 
 	add_extra_sidebar_item: function(label, action, insert_after, prepend) {
