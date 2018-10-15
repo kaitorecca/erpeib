@@ -13,7 +13,7 @@ frappe.ui.Page = frappe.ui.Page.extend({
 		var link = $('<a>').html(label).on("click", action).appendTo(li);
 
 		if(insert_after) {
-			li.insertAfter(parent.find(insert_after));
+			li.appendTo(parent.find(insert_after));
 		} else {
 			if(prepend) {
 				li.prependTo(parent);
