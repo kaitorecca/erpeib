@@ -45,8 +45,8 @@ frappe.listview_settings['Transaction Management'] = {
 			me.filter_area.clear();
 			me.filter_area.add([[me.doctype, "opportunity_status", '=', "FN-Hoàn thành, đã giải ngân"]]);
 		}, ".assigned-to-me");		
-		
+
 		me.transaction_management_sidebar_setup = true;
 	},
-	add_fields: ["reference_type", "reference_name"],
+
 }
