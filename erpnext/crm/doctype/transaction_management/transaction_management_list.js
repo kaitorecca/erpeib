@@ -15,34 +15,34 @@ frappe.listview_settings['Transaction Management'] = {
 
 		// add assigned by me
 		me.page.add_sidebar_item(__("All Transaction"), function() {
-			me.filter_area.clear();
-		}, ".transaction-list-all");
+			cur_list.filter_list.clear_filters()
+		}, ".assigned-to-me");
 
 		me.page.add_sidebar_item(__("Closing Next Month"), function() {
-			me.filter_area.clear();
+			cur_list.filter_list.clear_filters()
 			me.filter_area.add([[me.doctype, "execution", '<=', frappe.datetime.add_months(frappe.datetime.month_end(),1)]]);
 			me.filter_area.add([[me.doctype, "execution", '>=', frappe.datetime.add_months(frappe.datetime.month_start(),1)]]);
-		}, ".transaction-closing-next-month");
+		}, ".assigned-to-me");
 
 		me.page.add_sidebar_item(__("Closing This Month"), function() {
-			me.filter_area.clear();
+			cur_list.filter_list.clear_filters()
 			me.filter_area.add([[me.doctype, "execution", '<=', frappe.datetime.month_end()]]);
 			me.filter_area.add([[me.doctype, "execution", '>=', frappe.datetime.month_start()]]);			
-		}, ".transaction-closing-this-month");		
+		}, ".assigned-to-me");		
 
 		me.page.add_sidebar_item(__("My Transaction"), function() {
-			me.filter_area.clear();
+			cur_list.filter_list.clear_filters()
 			me.filter_area.add([[me.doctype, "owner", '=', frappe.session.user]]);
-		}, ".transaction-my-transaction");
+		}, ".assigned-to-me");
 
 		me.page.add_sidebar_item(__("New in last 7 days"), function() {
-			me.filter_area.clear();
+			cur_list.filter_list.clear_filters()
 			me.filter_area.add([[me.doctype, "created_on", '>=', frappe.datetime.add_days(frappe.datetime.get_today(),-7)]]);
-		}, ".transaction-new-this-week");
+		}, ".assigned-to-me");
 
 
 		me.page.add_sidebar_item(__("Won"), function() {
-			me.filter_area.clear();
+			cur_list.filter_list.clear_filters()
 			me.filter_area.add([[me.doctype, "opportunity_status", '=', "FN-Hoàn thành, đã giải ngân"]]);
 		}, ".assigned-to-me");		
 
